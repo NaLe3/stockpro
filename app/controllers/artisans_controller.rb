@@ -6,6 +6,7 @@ class ArtisansController < ApplicationController
 
   def show
     @artisan = Artisan.find(params[:id])
+    @missions = @artisan.missions
   end
 
   def new
@@ -28,6 +29,5 @@ class ArtisansController < ApplicationController
   def artisan_params
     params.require(:artisan).permit(:name, :first_name, :tjm, :desc)
   end
-
 
 end

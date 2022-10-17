@@ -1,0 +1,11 @@
+<h1> <%= "Les missions de #{@artisan.first_name}" %></h1>
+
+<ul>
+  <% @missions.each do |mission| %>
+    <li>
+      <p><%= "#{mission.start_at} au #{mission.end_at}" %></p>
+      <p><%= "prix: #{mission.price}" %></p>
+      <p><%= "description: #{mission.desc}" %></p>
+    </li>
+  <% end %>
+</ul>

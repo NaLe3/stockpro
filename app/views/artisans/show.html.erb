@@ -1,4 +1,10 @@
-<h1>Show</h1>  
+<h1><%= "#{@artisan.first_name} #{@artisan.name}" %></h1>  
 
+<ul>
+  <li><%= "TJM: #{@artisan.tjm}" %></li>
+  <li><%= "Desription: #{@artisan.desc}" %></li>
+</ul>
+
+<p><%= link_to "Voir les missions", missions_path(:artisan_id => @artisan.id)%><p> 
 
 <%= link_to 'Delete', artisan_path(@artisan.id), method: :delete %>
