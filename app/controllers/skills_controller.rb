@@ -6,8 +6,9 @@ class SkillsController < ApplicationController
   end
 
   def create
-    @skill = Skill.create(skill_params)
-    redirect_to artisans_path(params[:skill][:artisan])
+    artisan = Artisan.find(params[:skill][:artisan_id])
+    @skill = artisan.skills.create(skill_params)
+    redirect_to artisan_path(artisan)
   end
 
   private

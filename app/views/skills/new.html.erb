@@ -3,6 +3,6 @@
 <%= form_with model: @skill do |f| %>
   <%= f.label "Nom de la compétence" %>
   <%= f.text_field :name %>
-  <%= f.hidden_field "artisan", :value => @artisan %> 
+  <%= f.hidden_field "artisan_id", :value => @artisan.id %> 
   <%= f.submit "ajouter" %>
 <% end %>
