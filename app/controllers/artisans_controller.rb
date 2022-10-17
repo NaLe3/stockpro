@@ -37,7 +37,7 @@ class ArtisansController < ApplicationController
   private
 
   def artisan_params
-    params.require(:artisan).permit(:name, :first_name, :tjm, :desc)
+    params.require(:artisan).permit(:name, :first_name, :tjm, :siret, :desc)
   end
 
 end
