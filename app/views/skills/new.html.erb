@@ -1,0 +1,8 @@
+<h1>Ajouter une compétence</h1>  
+
+<%= form_with model: @skill do |f| %>
+  <%= f.label "Nom de la compétence" %>
+  <%= f.text_field :name %>
+  <%= f.hidden_field "artisan", :value => @artisan %> 
+  <%= f.submit "ajouter" %>
+<% end %>

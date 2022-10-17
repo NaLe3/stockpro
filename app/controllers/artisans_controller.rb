@@ -7,6 +7,7 @@ class ArtisansController < ApplicationController
   def show
     @artisan = Artisan.find(params[:id])
     @missions = @artisan.missions
+    @skills = @artisan.skills
   end
 
   def new

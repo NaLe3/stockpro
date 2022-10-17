@@ -5,8 +5,19 @@
   <li><%= "Desription: #{@artisan.desc}" %></li>
 </ul>
 
-<p><%= link_to "Modifier l'Artisan", edit_artisan_path(@artisan.id)%><p> 
+<p><%= link_to "Modifier l'Artisan", edit_artisan_path(@artisan.id)%></p> 
 
-<p><%= link_to "Voir les missions", missions_path(:artisan_id => @artisan.id)%><p> 
+<p><%= link_to "Voir les missions", missions_path(:artisan_id => @artisan.id)%></p>
 
-<%= link_to 'Delete', artisan_path(@artisan.id), method: :delete %>
+<p><%= link_to "Ajouter une compétence", new_skill_path(:artisan_id => @artisan.id)%></p>
+
+<p><%= link_to 'Delete', artisan_path(@artisan.id), method: :delete %></p>
+
+<% if @skills.present? %>
+  <h2><%= "Ses compétences" %></h2>  
+  <ul>
+    <% @skills.each do |skill| %>
+      <li><%= "#{skill.name}" %></li>
+    <% end %>
+  </ul>
+<% end %>

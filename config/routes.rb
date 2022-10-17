@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :artisans
 
   resources :missions
+
+  resources :skills
 end
