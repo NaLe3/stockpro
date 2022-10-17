@@ -18,6 +18,16 @@ class ArtisansController < ApplicationController
     redirect_to artisans_path
   end
 
+  def edit
+    @artisan = Artisan.find(params[:id])
+  end
+
+  def update
+    @artisan = Artisan.find(params[:id])
+    @artisan.update(artisan_params)
+    redirect_to artisans_path(@artisan)
+  end
+
   def destroy
     @artisan = Artisan.find(params[:id])
     @artisan.destroy

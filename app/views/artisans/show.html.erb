@@ -5,6 +5,8 @@
   <li><%= "Desription: #{@artisan.desc}" %></li>
 </ul>
 
+<p><%= link_to "Modifier l'Artisan", edit_artisan_path(@artisan.id)%><p> 
+
 <p><%= link_to "Voir les missions", missions_path(:artisan_id => @artisan.id)%><p> 
 
 <%= link_to 'Delete', artisan_path(@artisan.id), method: :delete %>

@@ -1,0 +1,13 @@
+<h1>Modifer l'Artisan</h1>  
+
+<%= form_with model: @artisan do |f| %>
+  <%= f.label "Nom" %>
+  <%= f.text_field :name %>
+  <%= f.label "Prénom" %>
+  <%= f.text_field :first_name %>
+  <%= f.label "TJM" %>
+  <%= f.number_field :tjm %>
+  <%= f.label "Description" %>
+  <%= f.text_field :desc%>
+  <%= f.submit "Créer" %>
+<% end %>
