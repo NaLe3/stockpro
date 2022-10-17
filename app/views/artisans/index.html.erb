@@ -1,0 +1,7 @@
+<h1>Artisans</h1>  
+<b><%= link_to "Créer un artisan", new_artisan_path %></b>  
+<ul>
+  <% @artisans.each do |artisan| %>
+    <li><%= link_to "#{artisan.first_name} #{artisan.name}", artisan %></li>
+  <% end %>
+</ul>
